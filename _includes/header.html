@@ -1,7 +1,7 @@
 <header id="header" class="parent justify-spaceBetween">
   <div class="inner w100 relative">
     <span class="f-left">
-      <a href="{{ '/' | relative_url }}">
+      <a href="{{ site.url }}">
         <h1>
           <span>gabriel</span>drs
         </h1>
@@ -11,7 +11,7 @@
       <!-- Nav pages -->
 	    {% for page in site.pages %}
 	      {% if page.layout == "page" %}
-	        <a href="{{ page.url | relative_url }}" title="{{ page.title }}">{{ page.title }}</a>
+	        <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
 	      {% endif %}
 	    {% endfor %}
 
