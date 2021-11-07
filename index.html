@@ -10,8 +10,8 @@ layout: default
 	  	<h2><a href="{{ post.url }}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
       <div class="by-line parent">
         <time datetime="{{ post.date | date_to_xmlschema }}"> <i>{{ post.date | date_to_string }}</i> </time>
-        &nbsp;&nbsp; &middot; &nbsp;&nbsp;
-        <span><i>{{ post.duration }}</i> </span>
+        {%if post.duration %}&nbsp;&nbsp; &middot; &nbsp;&nbsp;
+        <span><i>{{ post.duration }}</i> </span>{% endif %}
       </div>
       <p>{{ post.content | strip_html | truncatewords:50 }}</p>
 	  </div>
